@@ -16,7 +16,6 @@ import icon_logout from 'icon/icon_logout.svg'
 import icon_mark from 'icon/icon_star.svg'
 import icon_vote from 'icon/icon_vote.svg'
 
-
 import Homework from 'app/conf/homework'
 
 
@@ -136,7 +135,7 @@ class Conf extends React.Component {
               <img src={icon_mark} />
               <span> 成绩</span>
             </div>
-            <div className="m-menu-item" onClick={this.doMenu.bind(this, 6)}>
+            <div className="m-menu-item" onClick={this.doMenu.bind(this, 4)}>
               <img src={icon_work} />
               <span> 作业</span>
             </div>
@@ -161,7 +160,7 @@ class Conf extends React.Component {
         </div>
 
         <div className="m-wrap">
-          {(this.state.menu === 6) && <Homework />}
+          {/* {(this.state.menu === 6) && <Homework />} */}
           {(this.state.menu === 4) && <Homework />}
           {(this.state.menu === 3) && <Homework />}
           {(this.state.menu === 2) && <Homework />}
