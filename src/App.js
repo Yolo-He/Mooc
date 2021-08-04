@@ -14,19 +14,19 @@ class App extends React.Component {
 		return (
 			<Router>
 				<Switch>
-					<Route exact path='/login' component={Loadable({ loader: () => import('./app/login') })}   />
+					<Route exact path='/login' component={Loadable({ loader: () => import('./app/login') })} />
 					<Route path='/' render={() => (
 						<div className='app-root'>
 							<NavWrapper>
 								<Switch>
-                  <Route exact path='/' component={Loadable({ loader: () => import('./app/main')})}  />
-                  <Route exact path='/conf'     component={Loadable({ loader: () => import('./app/conf')})}  />
-                  <Route exact path='/homework' component={Loadable({ loader: () => import('./app/conf/homework')})}  />
-                  
-                </Switch>
+									<Route exact path='/' component={Loadable({ loader: () => import('./app/main') })} />
+									<Route exact path='/conf' component={Loadable({ loader: () => import('./app/conf') })} />
+									<Route exact path='/homework' component={Loadable({ loader: () => import('./app/conf/homework') })} />
+									<Route exact path='/conf/edit' component={Loadable({ loader: () => import('./app/conf/edit') })} />
+								</Switch>
 							</NavWrapper>
 						</div>
-					)}/>
+					)} />
 				</Switch>
 			</Router>
 		)

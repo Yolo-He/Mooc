@@ -26,10 +26,9 @@ class Grade extends React.Component {
       site: [],
       ques: [],
       disp: [true, false, false, false],
-      cour: [''],//这
-      // cour: '',
-      // 实验信息
-      work: [],
+
+      cour: [''],//课程
+      work: [],//作业
       active: 0
     }
   }
@@ -71,7 +70,6 @@ class Grade extends React.Component {
               )
             })}
           </div>
-          {/* <span className={["u-course", active === 0 ? 'active' : ''].join(' ')} key={0} >{cour}</span> */}
 
           <div className="m-content">
             {work.map((item, index) => {
