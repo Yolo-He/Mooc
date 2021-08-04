@@ -1,0 +1,41 @@
+@media screen and (min-width: 1000px) {
+  .g-edit .ck-editor__editable {
+    min-height: 80vh;
+    max-height: 80vh;
+    height: 80vh;
+  }
+  .g-edit .m-hd {
+    background-color: #333333;
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    height: 5vh;
+    line-height: 5vh;
+    padding-left: 2vw;
+  }
+  .g-edit .m-body {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3.5vh;
+  }
+  .g-edit .m-body .m-edit {
+    width: 55vw;
+    height: 85vh;
+  }
+  .g-edit .m-body .m-btn {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 3vw;
+  }
+  .g-edit .m-body .m-btn .u-btn {
+    width: 8vw;
+    height: 5vh;
+    text-align: center;
+    line-height: 2vh;
+    margin: 2vh 0;
+    font-size: 17px;
+    background-color: white;
+  }
+}

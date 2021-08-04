@@ -16,7 +16,7 @@ class Edit extends React.Component {
 
 		this.state = {
 			loading: false,
-			title: '实验一、XXXXXXXXXXXXXXXXXX',
+			title: '实验一 :',
 			// 模拟数据
 			data: '<p>123</p><p>123</p>'
 		}

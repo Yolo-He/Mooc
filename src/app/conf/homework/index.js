@@ -75,16 +75,16 @@ class Grade extends React.Component {
             {work.map((item, index) => {
               return (
                 <div className="m-work" key={index}>
-                  <div className="u-title">{item.name}</div>
+                  <div className="u-title">{(index + 1) + '.   ' + (item.name)}</div>
                   <div className="u-state">
                     {item.state === '1' ? (
-                      <div style={{ color: 'lightgrey' }}>未开放</div>) :
+                      <div style={{ color: 'lightgrey' }}>未完成</div>) :
                       item.state === '2' ?
-                        (<div style={{ color: 'red' }}>未完成</div>) :
-                        (<div style={{ color: 'lightgreen' }}> 已完成</div>)}
+                        (<div style={{ color: 'red' }}>编辑中</div>) :
+                        (<div style={{ color: 'lightgreen' }}> 已提交</div>)}
                   </div>
                   <div className="u-score">{item.mark}</div>
-                  <div className="u-btn" onClick={() => this.props.history.push('conf/edit')}>编辑</div>
+                  <div className="u-btn" onClick={() => this.props.history.push('conf/edit')}>去完成</div>
                 </div>
               )
             })}
