@@ -8,6 +8,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import '@ckeditor/ckeditor5-build-classic/build/translations/zh-cn';
 import './index.less'
+import Editor from 'for-editor'
 
 @inject('userStore', 'mainStore')
 class Edit extends React.Component {
@@ -18,8 +19,20 @@ class Edit extends React.Component {
 			loading: false,
 			title: '实验一 :',
 			// 模拟数据
-			data: '<p>123</p><p>123</p>'
+			data: '<p>123</p><p>123</p>',
+			value: ''
 		}
+	}
+
+	handleChange(value) {
+		this.setState({
+			value
+		})
+	}
+
+	addImg($file) {
+		this.$vm.current.$img2Url($file.name, 'file_url')
+		console.log($file)
 	}
 
 	async componentDidMount() {
@@ -32,7 +45,7 @@ class Edit extends React.Component {
 	}
 
 	render() {
-		let { title, data } = this.state
+		let { title, data, value } = this.state
 
 		return (
 			<Spin spinning={this.state.loading}>
@@ -40,7 +53,7 @@ class Edit extends React.Component {
 					<div className="m-hd">{title}</div>
 					<div className="m-body">
 						<div className="m-edit">
-							<CKEditor
+							{/* <CKEditor
 								editor={ClassicEditor}
 								pageHeight='80vh'
 								language='zh-cn'
@@ -62,13 +75,13 @@ class Edit extends React.Component {
 							// onFocus={(event, editor) => {
 							// 	console.log('Focus.', editor)
 							// }}
-							/>
+							/> */}
+							<Editor value={value} onChange={this.handleChange.bind(this)} />
 						</div>
 						<div className="m-btn">
-							<Button className={`u-btn`}>保存</Button>
+							{/* <Button className={`u-btn`}>保存</Button> */}
 							<Button className={`u-btn`}>提交</Button>
 							<Button className={`u-btn`}>上传</Button>
-							<Button className={`u-btn`}>预览</Button>
 						</div>
 					</div>
 				</div>

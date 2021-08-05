@@ -1,19 +1,40 @@
 @media screen and (min-width: 1000px) {
+  * {
+    box-sizing: border-box;
+  }
   .g-grade .active {
     background-color: #ff6600;
   }
   .g-grade .active:hover {
     background-color: #ff6600 !important;
   }
+  .g-grade .m-title {
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    background: #333;
+    position: relative;
+  }
+  .g-grade .m-title span {
+    flex: 1 1;
+    text-align: center;
+  }
+  .g-grade .m-title img {
+    height: 15px;
+  }
   .g-grade .m-hd {
     width: 100%;
-    height: 4vh;
+    height: 35px;
     background-color: #333;
     display: flex;
     flex-flow: row nowrap;
   }
   .g-grade .m-hd .u-course {
-    font-size: 12px;
+    font-size: 15px;
     color: #fff;
     padding: 0 1vw;
     border-right: 2px solid #444;
@@ -27,16 +48,18 @@
     background-color: #ff6600;
   }
   .g-grade .m-content {
-    width: 100%;
-    height: 90vh;
-    padding: 6vh 1vw;
+    width: 80%;
+    margin: 40px 10% 0 10%;
+    display: flex;
+    flex-direction: column;
   }
   .g-grade .m-content .m-work {
     width: 100%;
-    height: 4vh;
+    height: 35px;
     margin-bottom: 2vh;
     display: flex;
-    font-size: 16px;
+    font-size: 18px;
+    color: white;
   }
   .g-grade .m-content .m-work div {
     display: flex;
@@ -44,19 +67,20 @@
     align-items: center;
   }
   .g-grade .m-content .m-work .u-title {
-    width: 18vw;
-    border-right: 2px solid #ddd;
+    width: 35%;
+    background-color: #90b8dd;
   }
   .g-grade .m-content .m-work .u-state {
-    width: 7vw;
-    border-right: 2px solid #ddd;
+    width: 15%;
+    background-color: #90d17a;
   }
   .g-grade .m-content .m-work .u-score {
-    width: 7vw;
-    border-right: 2px solid #ddd;
+    width: 25%;
+    background-color: #ee9857;
   }
   .g-grade .m-content .m-work .u-btn {
-    width: 8vw;
+    width: 22%;
     cursor: pointer;
+    background-color: #ddd;
   }
 }
